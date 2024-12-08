@@ -39,32 +39,27 @@ Figure 02  Encoder 8 * 3
 /* write all the steps invloved */
 
 **PROGRAM**
-```
-module exp8(d, clk, rst, q);
-input d,clk,rst;
-output reg q;
-always @(negedge clk or posedge rst) begin
-if (rst)
-   q <= 0; 
-else
-   q <= d;
-end
-endmodule
-```
 
 /* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
-
+```
+module exp5(a,b,c,y0,y1,y2,y3,y4,y5,y6,y7);
+input y0,y1,y2,y3,y4,y5,y6,y7;
+output a,b,c;
+assign a= ( y4 | y5 | y6 | y7);
+assign b= ( y2 | y3 | y6 | y7);
+assign c= ( y1 | y3 | y5 | y7);
+endmodule
+```
 Developed by:Kushma.S RegisterNumber: 24013666
-*/
 
 **RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
 
-![Screenshot 2024-12-03 181419](https://github.com/user-attachments/assets/93d760d8-b02a-4c95-b113-d30bde4efc21)
+![exp5 diagram](https://github.com/user-attachments/assets/6528af10-db80-4e53-a8b7-871664411d23)
 
 
 **TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
 
-![Screenshot 2024-12-03 181707](https://github.com/user-attachments/assets/863c203f-40f0-4376-9550-f2def4b9eb7a)
+![exp5 timing diagram](https://github.com/user-attachments/assets/eb501033-5e4a-4dea-82b5-a9e18a0b85d3)
 
 
 **RESULTS**
